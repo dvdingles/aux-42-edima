@@ -6,96 +6,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/4D SOCKYS.gltf");
+  const { nodes, materials } = useGLTF("/3D EDIMA.gltf");
   return (
     <group {...props} dispose={null}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Plano002.geometry}
-        material={materials["Material.001"]}
-        position={[-0.06, 0.21, -0.06]}
-        rotation={[0, Math.PI / 2, 0]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Plano003.geometry}
-        material={materials["Material.001"]}
-        position={[-0.06, 0.21, -0.06]}
-        rotation={[0, Math.PI / 2, 0]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Plano004.geometry}
-        material={materials["Material.001"]}
-        position={[-0.06, 0.21, 0.11]}
-        rotation={[0, Math.PI / 2, 0]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Texto.geometry}
-        material={materials["Material.001"]}
-        position={[0.22, 0, 0.02]}
-        rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-        scale={0.4}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Texto001.geometry}
-        material={materials["Material.001"]}
-        position={[0.05, 0, 0.26]}
-        rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-        scale={0.4}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Texto002.geometry}
-        material={materials["Material.001"]}
-        position={[0.23, 0.15, -0.09]}
-        rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-        scale={0.4}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes["TQ_ARD-geom"].geometry}
-        material={materials.TQ_ARD_front}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes["TQ_ARD-geom_1"].geometry}
-        material={materials.TQ_ARD_back}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes["TQ_ARD-geom_2"].geometry}
-        material={materials.TQ_ARD_edge}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes["TQ_ARD-geom001"].geometry}
-        material={materials.TQ_ARD_front}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes["TQ_ARD-geom001_1"].geometry}
-        material={materials.TQ_ARD_back}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes["TQ_ARD-geom001_2"].geometry}
-        material={materials.TQ_ARD_edge}
-      />
       <mesh
         castShadow
         receiveShadow
@@ -114,8 +27,26 @@ export function Dav(props) {
         geometry={nodes["TQ2_ARD-geom_2"].geometry}
         material={materials.TQ2_ARD_edge}
       />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["TQ1_ARD-geom"].geometry}
+        material={materials.TQ1_ARD_front}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["TQ1_ARD-geom_1"].geometry}
+        material={materials.TQ1_ARD_back}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["TQ1_ARD-geom_2"].geometry}
+        material={materials.TQ1_ARD_edge}
+      />
     </group>
   );
 }
 
-useGLTF.preload("/4D SOCKYS.gltf");
+useGLTF.preload("/3D EDIMA.gltf");
